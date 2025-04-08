@@ -1,6 +1,6 @@
 <div class="user-details">
-  <h1>{{ site.about.header | default("Skills and Experience") }}</h1>
-  <p>{{ site.data.about.description | default(omit) }}</p>
+  <h1>{{ site.data.about.header|default('Skills and Experience') }}</h1>
+  <p>{{ site.data.about.description|default(omit) }}</p>
 </div>
 {% if site.data.experience %}
 <div class="user">
