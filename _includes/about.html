@@ -1,13 +1,15 @@
 <div class="user-details">
-  <h1>{{ page.about_me_header | default("Skills and Experience") }}</h1>
-  <p>{{ site.user_description }}</p>
+  <h1>{{ site.about.header | default("Skills and Experience") }}</h1>
+  <p>{{ site.data.about.description | default(omit) }}</p>
 </div>
+{% if site.data.experience %}
 <div class="user">
-{% for details in page.about_me %}
+{% for exp in site.data.experience %}
   <div class="tech">
-    <h2>{{ details.header }}</h2>
+    <h2>{{ exp.header }}</h2>
     <!-- Put area for logos or something here. -->
-    <p>{{ details.name }}</p>
+    <p>{{ exp.paragraph }}</p>
   </div>
 {% endfor %}
 </div>
+{% endif %}
