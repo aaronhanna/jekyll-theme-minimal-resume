@@ -1,9 +1,9 @@
 <div class="user-details">
-  <h1>{{ about_me_header | default("Skills and Experience") }}</h1>
+  <h1>{{ page.about_me_header | default("Skills and Experience") }}</h1>
   <p>{{ site.user_description }}</p>
 </div>
 <div class="user">
-{% for details in about_me %}
+{% for details in page.about_me %}
   <div class="tech">
     <h2>{{ details.header }}</h2>
     <!-- Put area for logos or something here. -->
